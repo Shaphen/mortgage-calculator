@@ -8,7 +8,7 @@ function App() {
     downPayment: "",
     term: "",
     interestRate: "",
-    mortgage: ""
+    mortgage: 0
   });
 
   const handleChange = event => {
@@ -16,12 +16,13 @@ function App() {
   }
 
 
-  const runCalculation = () => {
+  const runCalculation = event => {
+    event.preventDefault();
     const loanBalance = parseInt(values.homeValue) - parseInt(values.downPayment);
     const interestRateNum = parseInt(values.interestRate) / 100;
     const termNum = parseInt(values.term);
     const mortgage = calculateMortgage(loanBalance, interestRateNum, termNum);
-    console.log(mortgage);
+    setValues({ ...values, ["mortgage"]: mortgage })
   }
 
   return (
@@ -69,8 +70,12 @@ function App() {
             value={ values.term }
             onChange={ handleChange } />
         </div>
-        <input type="submit" value="Submit" className="fomr-submit" />
+        <input type="submit" value="Submit" className="form-submit" />
       </form>
+
+      <div className="mortgage-result">
+        <p>{ values.mortgage }</p>
+      </div>
     </div>
   );
 }
