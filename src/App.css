@@ -43,6 +43,15 @@
   padding: 5px;
 }
 
+.form-submit {
+  width: 45%;
+  padding: 5px;
+}
+
+.mortgage-result {
+  margin: 15px;
+}
+
 #root, html, body {
   background-color: #131516;
   height: 100%;

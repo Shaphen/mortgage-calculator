@@ -78,7 +78,7 @@ function App() {
       </form>
 
       <div className="mortgage-result">
-        <p>{ values.mortgage }</p>
+        <p>Monthly Payment: { values.mortgage }</p>
       </div>
     </div>
   );
