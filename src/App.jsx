@@ -27,9 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className="title">Mortgage Calculator</div>
 
       <form className="form" onSubmit={ runCalculation }>
+        <div className="title">Mortgage Calculator</div>
         <div className="home-value-container">
           <p className="home-value-title">Home Value ($)</p>
           <input 
@@ -38,6 +38,7 @@ function App() {
             className="home-value-input"
             name="homeValue"
             value={ values.homeValue }
+            autoComplete="off"
             onChange={ handleChange } />
         </div>
         <div className="down-payment-container">
@@ -48,6 +49,7 @@ function App() {
             className="down-payment-input"
             name="downPayment"
             value={ values.downPayment }
+            autoComplete="off"
             onChange={ handleChange } />
         </div>
         <div className="interest-rate-container">
@@ -58,6 +60,7 @@ function App() {
             className="interest-rate-input"
             name="interestRate"
             value={ values.interestRate }
+            autoComplete="off"
             onChange={ handleChange } />
         </div>
         <div className="term-container">
@@ -68,6 +71,7 @@ function App() {
             className="term-input"
             name="term"
             value={ values.term }
+            autoComplete="off"
             onChange={ handleChange } />
         </div>
         <input type="submit" value="Submit" className="form-submit" />

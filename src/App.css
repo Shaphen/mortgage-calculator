@@ -1,11 +1,56 @@
 .App {
-  height: 100%;
-  width: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #131516;
   color: #d8d4cf;
 }
 
+.title {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.form {
+  width: 400px;
+}
+
+.home-value-container, 
+.down-payment-container, 
+.interest-rate-container, 
+.term-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  /* margin-left: 75px; */
+  margin-bottom: 10px;
+}
+
+.home-value-title, 
+.down-payment-title, 
+.interest-rate-title, 
+.term-title {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.home-value-input, 
+.down-payment-input, 
+.interest-rate-input, 
+.term-input {
+  width: 100%;
+  padding: 5px;
+}
+
 #root, html, body {
+  background-color: #131516;
   height: 100%;
+  width: auto;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
